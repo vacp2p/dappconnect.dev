@@ -124,8 +124,55 @@
 					<p class="text-sm leading-6 italic opacity-75 mb-7">The simple API allows you to introduce decentralized, private, secure communication in your application in minutes.</p>
 					<a class="text-blue text-xs font-bold italic bg-link-arrow-blue bg-left bg-no-repeat pl-3 hover:underline" href="" >Get started</a>
 				</div>
-				<div id="code" class="bg-rectangle97 p-4 md:px-8 lg:max-w-code lg:w-full lg:p-8 lg:h-96">
-					<div id="testText" class="text-sm font-special"></div>
+				<div id="typewriter" class="bg-rectangle97 p-4 md:px-8 lg:max-w-code lg:w-full lg:p-8 lg:h-96">
+
+					<span class="text-sm font-special text-red">import</span>
+					<span class="text-sm font-special text-rectangle102">{</span>
+					<span class="text-sm font-special text-orange">Waku</span>
+					<span class="text-sm font-special text-rectangle102">,</span>
+					<span class="text-sm font-special text-orange">WakuMessage</span>
+					<span class="text-sm font-special text-rectangle102">}</span>
+					<span class="text-sm font-special text-red">from</span>
+					<span class="text-sm font-special text-rectangle98">'js-waku'</span>
+					<span class="text-sm font-special text-rectangle102">;</span>
+					<br><br>
+					<span class="text-sm font-special text-red">const</span>
+					<span class="text-sm font-special text-rectangle102">waku</span>
+					<span class="text-sm font-special text-blueLight">=</span>
+					<span class="text-sm font-special text-red">await</span>
+					<span class="text-sm font-special text-orange">Waku</span>
+					<span class="text-sm font-special text-rectangle102">.</span>
+					<span class="text-sm font-special text-violet">create</span>
+					<span class="text-sm font-special text-rectangle102">({</span>
+					<span class="text-sm font-special text-blueLight">bootstrap</span>
+					<span class="text-sm font-special text-rectangle102">:</span>
+					<span class="text-sm font-special text-blueLight">true</span>
+					<span class="text-sm font-special text-rectangle102"> </span>
+					<span class="text-sm font-special text-rectangle102">});</span>
+					<br><br>
+					<span class="text-sm font-special text-red">const</span>
+					<span class="text-sm font-special text-rectangle102">msg</span>
+					<span class="text-sm font-special text-blueLight">=</span>
+					<span class="text-sm font-special text-red">await</span>
+					<span class="text-sm font-special text-orange">WakuMessage</span>
+					<span class="text-sm font-special text-rectangle102">.</span>
+					<span class="text-sm font-special text-violet">fromUtf8String</span>
+					<span class="text-sm font-special text-rectangle102">(</span>
+					<br><br>
+					<span class="text-sm font-special text-rectangle98 pl-4">'I am using a decentralized network for messaging',</span>
+					<br><br>
+					<span class="text-sm font-special text-rectangle98 pl-4">'/my-cool-app/1/my-use-case/proto'</span>
+					<br><br>
+					<span class="text-sm font-special text-rectangle102">);</span>
+					<br><br>
+					<span class="text-sm font-special text-red">await</span>
+					<span class="text-sm font-special text-rectangle102">waku.</span>
+					<span class="text-sm font-special text-blueLight">bootstrap</span>
+					<span class="text-sm font-special text-rectangle102">.</span>
+					<span class="text-sm font-special text-violet">send</span>
+					<span class="text-sm font-special text-rectangle102">(msg);</span>
+
+					<!--					<div id="testText" class="text-sm font-special"></div>-->
 				</div>
 			</section>
 			<!-- Use Cases -->
