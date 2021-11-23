@@ -85,9 +85,13 @@ function isInViewport(element) {
     );
 }
 
+function write () {
+    typewriter.type();
+}
+
 function eventOnScroll () {
     if(isInViewport(section)) {
-        typewriter.type();
+        write ();
         document.removeEventListener('scroll', eventOnScroll);
     }
 }
