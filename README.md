@@ -10,8 +10,8 @@
 2. Start the development server:
 
     ```bash
-    # gulp
-    gulp
+    # Using gulp
+    npm run dev
     ```
 
    Now you should be able to see the project running at [localhost:3000](http://localhost:3000).
@@ -21,7 +21,7 @@
 ## For production
 
 ```bash
-# gulp
-gulp build
+# Using gulp
+npm run build
 
 ```
