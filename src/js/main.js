@@ -5,75 +5,39 @@ const menuVisibility = () => {
     document.querySelector('#menu-wrapper').classList.toggle('menu-visible');
 }
 
-function setupTypewriter(t) {
-    var HTML = t.innerHTML;
+const code = document.querySelector('#code')
+const content = code.querySelectorAll('span')
+const codeText = []
+const codeElements = []
 
-    t.innerHTML = "";
-
-    var cursorPosition = 0,
-        tag = "",
-        writingTag = false,
-        tagOpen = false,
-        typeSpeed = 50,
-        tempTypeSpeed = 0;
-
-    var type = function() {
-
-        if (writingTag === true) {
-            tag += HTML[cursorPosition];
-        }
-
-        if (HTML[cursorPosition] === "<") {
-            tempTypeSpeed = 0;
-            if (tagOpen) {
-                tagOpen = false;
-                writingTag = true;
-            } else {
-                tag = '';
-                tagOpen = true;
-                writingTag = true;
-                tag += HTML[cursorPosition];
-            }
-        }
-        if (!writingTag && tagOpen) {
-            tag.innerHTML += HTML[cursorPosition];
-        }
-        if (!writingTag && !tagOpen) {
-            if (HTML[cursorPosition] === "") {
-                tempTypeSpeed = 0;
-            }
-            else {
-                tempTypeSpeed = 40;
-            }
-            t.innerHTML += HTML[cursorPosition];
-        }
-        if (writingTag === true && HTML[cursorPosition] === ">") {
-            tempTypeSpeed = 40;
-            writingTag = false;
-            if (tagOpen) {
-                var newSpan = document.createElement("span");
-                t.appendChild(newSpan);
-                newSpan.innerHTML = tag;
-                tag = newSpan.firstChild;
-            }
-        }
-
-        cursorPosition += 1;
-        if (cursorPosition < HTML.length - 1) {
-            setTimeout(type, tempTypeSpeed);
-        }
-
-    };
-
-    return {
-        type: type
-    };
+const codeInitContent = () => {
+    content.forEach(el => {
+        codeText.push(el.innerText)
+        el.innerText = ''
+        codeElements.push(el)
+    })
 }
 
-var typer = document.getElementById('typewriter');
+const writeCode = (speed = 50) => {
+    let startWriting = 0
+    let textElement
 
-typewriter = setupTypewriter(typewriter);
+    codeText.forEach((el, index) => {
+        const text = [...el]
 
+        setTimeout(() => {
+            textElement = codeElements[index]
+
+            text.forEach((char, i) => {
+                setTimeout(() => {
+                    char === ' ' ? char = ' ' : char
+                    textElement.innerHTML += char
+                }, i * speed)
+            })
+        }, startWriting * speed)
+        startWriting = startWriting + text.length
+    })
+};
 
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
@@ -85,17 +49,14 @@ function isInViewport(element) {
     );
 }
 
-function write () {
-    typewriter.type();
-}
-
 function eventOnScroll () {
     if(isInViewport(section)) {
-        write ();
+        writeCode(40)
         document.removeEventListener('scroll', eventOnScroll);
     }
 }
 
+codeInitContent()
 document.querySelector('#burger').addEventListener('click', menuVisibility);
 document.querySelector('.button--close').addEventListener('click', menuVisibility);
 window.addEventListener('resize', function () {
