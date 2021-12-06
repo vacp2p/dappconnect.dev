@@ -29,6 +29,14 @@
     @apply block mt-0
 }
 
+#code .tight {
+    margin: 0 -3px;
+}
+
+#code .tight-left {
+    margin-left: -4px;
+}
+
 #typewriter:after {
     content: '|';
     animation: blink 400ms linear infinite alternate;

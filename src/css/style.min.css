@@ -19951,6 +19951,14 @@ video {
   display: block
 }
 
+#code .tight {
+  margin: 0 -3px;
+}
+
+#code .tight-left {
+  margin-left: -4px;
+}
+
 #typewriter:after {
   content: '|';
   -webkit-animation: blink 400ms linear infinite alternate;
