@@ -15,8 +15,12 @@ module.exports = {
 			rectangle102: '#fff',
 			black: '#000000',
 			blue: '#3A71F9',
+			blueLight: '#73b6f2',
 			grey: '#D5D5D5',
 			green: '#60D086',
+			red: '#f67971',
+			violet: '#b592dc',
+			orange: '#e09350',
 		},
 		container: {
 			padding: {

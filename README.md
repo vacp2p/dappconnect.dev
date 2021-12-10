@@ -3,15 +3,15 @@
 1. Install the dependencies:
 
     ```bash
-    # npm
-    npm install
+    # yarn
+    yarn install
     ```
 
 2. Start the development server:
 
     ```bash
-    # Using gulp
-    npm run dev
+    # gulp
+    gulp
     ```
 
    Now you should be able to see the project running at [localhost:3000](http://localhost:3000).
@@ -21,7 +21,7 @@
 ## For production
 
 ```bash
-# Using gulp
-npm run build
+# gulp
+gulp build
 
 ```
