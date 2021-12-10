@@ -1,5 +1,5 @@
 {
-  "name": "dapp-connect",
+  "name": "@dappconnect/dappconnect.dev",
   "version": "1.0.0",
   "description": "DApp Connect - landing page",
   "main": "src/index.html",
