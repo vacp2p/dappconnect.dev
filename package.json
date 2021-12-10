@@ -2,6 +2,7 @@
   "name": "@dappconnect/dappconnect.dev",
   "version": "1.0.0",
   "description": "DApp Connect - landing page",
+  "license": "MIT",
   "main": "src/index.html",
   "scripts": {
     "dev": "gulp",
