@@ -23,6 +23,10 @@ const images = () =>
     .pipe(imagemin())
     .pipe(dest('./dist/assets/images'))
 
+const cname = () =>
+  gulp.src('./src/CNAME')
+    .pipe(gulp.dest('./dist/CNAME'))
+
 const html = () =>
   src('./src/*.html')
     .pipe(dest('./dist'))
@@ -43,6 +47,7 @@ const watchsrc = () => {
 const build = () =>
   src(
     [
+      'src/CNAME',
       'src/css/*.css',
       'src/assets/images/**/*',
       'src/js/main.js',
@@ -50,9 +55,10 @@ const build = () =>
     ], {base: 'src'}
   ).pipe(dest('dist'))
 
-exports.js = js
 exports.css = css
+exports.js = js
 exports.html = html
+exports.cname = cname
 exports.images = images
 exports.server = server
 exports.build = series(build)
