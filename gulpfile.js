@@ -1,73 +1,60 @@
-const { watch, series, src, dest } = require("gulp");
-var browserSync = require("browser-sync").create();
-const concat = require('gulp-concat');
-var postcss = require("gulp-postcss");
-const imagemin = require("gulp-imagemin");
-const uglify = require('gulp-uglify-es').default;
+const { watch, series, src, dest } = require('gulp')
+var browserSync = require('browser-sync').create()
+const concat = require('gulp-concat')
+var postcss = require('gulp-postcss')
+const imagemin = require('gulp-imagemin')
+const uglify = require('gulp-uglify-es').default
 
-function cssTask(cb) {
-	return src("./src/css/*.css")
-		.pipe(postcss())
-		.pipe(concat('style.min.css'))
-		.pipe(dest("./src/css"))
-		.pipe(browserSync.stream());
-	cb();
-}
+const css = () =>
+  src('./src/css/*.css')
+    .pipe(postcss())
+    .pipe(dest('./dist/css'))
+    .pipe(browserSync.stream())
 
-function scriptsTask(cb) {
-	return src('./src/js/*.js')
-		.pipe(uglify())
-		.pipe(dest('./dist/js'))
-		.pipe(browserSync.stream());
-	cb();
-}
+const js = () =>
+  src('./src/js/*.js')
+    .pipe(uglify())
+    .pipe(dest('./dist/js'))
+    .pipe(browserSync.stream())
 
 // Task for minifying images
-function imageminTask(cb) {
-	return src("./src/assets/images/**/*")
-		.pipe(imagemin())
-		.pipe(dest("./dist/assets/images"));
-	cb();
-}
+const images = () =>
+  src('./src/assets/images/**/*')
+    .pipe(imagemin())
+    .pipe(dest('./dist/assets/images'))
 
-function htmlBuild(cb) {
-	return src("./src/*.html")
-		.pipe(dest("./dist"))
-	cb();
-}
+const html = () =>
+  src('./src/*.html')
+    .pipe(dest('./dist'))
 
-function browsersyncServe(cb) {
-	browserSync.init({
-		server: {
-			baseDir: "src/",
-		},
-	});
-	cb();
-}
+const server = () =>
+  browserSync.init({server: { baseDir: 'src/', }})
 
-function browsersyncReload(cb) {
-	browserSync.reload();
-	cb();
-}
+const reload = () =>
+  browserSync.reload()
 
 // Watch Files & Reload browser after tasks
-function watchTask() {
-	watch("./src/**/*.html", browsersyncReload);
-	watch(["./src/css/*.css"], series(cssTask, browsersyncReload));
-	watch(["./src/js/*.js"], series(scriptsTask, browsersyncReload));
+const watchsrc = () => {
+  watch('./src/**/*.html', reload)
+  watch(['./src/css/*.css'], series(css, reload))
+  watch(['./src/js/*.js'], series(js, reload))
 }
 
-function build() {
-	return src([
-		'src/css/style.min.css',
-		'src/assets/images/**/*',
-		'src/js/main.js',
-		'src/**/*.html ',
-	], {base: 'src'})
-		.pipe(dest('dist'))
-}
+const build = () =>
+  src(
+    [
+      'src/css/*.css',
+      'src/assets/images/**/*',
+      'src/js/main.js',
+      'src/**/*.html ',
+    ], {base: 'src'}
+  ).pipe(dest('dist'))
 
-exports.build = series(build);
-exports.default = series(cssTask, scriptsTask, htmlBuild, browsersyncServe, watchTask);
-exports.css = cssTask;
-exports.images = imageminTask;
+exports.js = js
+exports.css = css
+exports.html = html
+exports.images = images
+exports.server = server
+exports.build = series(build)
+exports.devel = series(css, js, html, server, watchsrc)
+exports.default = exports.devel
