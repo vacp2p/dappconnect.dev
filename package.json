@@ -1,7 +1,7 @@
 {
   "name": "@dappconnect/dappconnect.dev",
   "version": "1.0.0",
-  "description": "DappConnect - landing page",
+  "description": "WakuConnect - landing page",
   "license": "MIT",
   "main": "src/index.html",
   "scripts": {
