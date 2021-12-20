@@ -1,6 +1,6 @@
 # Description
 
-This repository is the source for https://docs.dappconnect.dev/.
+This repository is the source for https://wakuconnect.dev/.
 
 It is built with [Gulp](https://gulpjs.com/) and styled with [TailWind](https://tailwindcss.com/).
 
