@@ -5,7 +5,7 @@ const ghpublish = promisify(publish)
 /* fix for "Unhandled promise rejections" */
 process.on('unhandledRejection', err => { throw err })
 
-const distDir = '_site'
+const distDir = 'dist'
 const branch = 'gh-pages'
 const org = 'vacp2p'
 const repo = 'wakuconnect.dev'
