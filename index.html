@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="./css/styles.css" rel="stylesheet" />
+		<title>WakuConnect</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+		<link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+		<link rel="manifest" href="/src/assets/images/favicon/site.webmanifest">
+		<link rel="mask-icon" href="assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="theme-color" content="#ffffff">
+	</head>
+	<body class="text-rectangle97 overflow-x-hidden">
+		<header class="lg:px-8 xl:px-13">
+			<div class="lg:container lg:mx-auto">
+			<div class="relative flex justify-between items-center py-2 px-4 md:py-8 md:px-10 md:border-b md:border-grey lg:px-0">
+				<svg class="w-10 h-10">
+					<use href="#logo"/>
+				</svg>
+				<div id="menu-wrapper" class="absolute z-10 top-0 left-0 transform -translate-y-full duration-200 w-screen h-screen flex md:bg-green md:top-1/2 md:left-1/2 md:transform md:-translate-y-2/4 md:-translate-x-2/4 md:w-auto md:h-auto">
+					<div class="bg-black opacity-40 w-1/4 h-full md:hidden"></div>
+					<div class="flex flex-col overflow-y-auto bg-rectangle102 w-3/4 h-full p-6 md:p-0 md:w-full md:overflow-visible">
+						<button class="button--close absolute top-2 right-2 flex z-30 flex-col justify-center items-center w-12 h-12 md:hidden">
+							<span class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-45 block w-6 h-0.5 bg-rectangle97"></span>
+							<span class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -rotate-45 block w-6 h-0.5 bg-rectangle97"></span>
+						</button>
+						<nav class="mb-auto">
+							<ul class="md:flex">
+								<li class="items-center menu-item relative mb-8 cursor-pointer md:flex md:m-0 md:py-2">
+									<a class="inline-block font-special font-bold text-xs mb-4 md:m-0" href="https://docs.wakuconnect.dev/">Docs</a>
+									<img class="hidden transform duration-200 rotate-90 ml-2 md:block" src="assets/images/arrow/arrow-black.svg" alt="">
+									<ul class="bg-rectangle102 md:absolute md:top-full md:left-2/4 md:transform md:-translate-x-2/4 md:p-4 md:shadow md:hidden">
+										<li class="mb-4 md:my-0 md:mb-4"><a class="font-special font-medium text-xs whitespace-nowrap hover:text-blue hover:underline" href="https://docs.wakuconnect.dev/docs/quick_start/">Quick Start</a></li>
+										<li class="mb-4"><a class="font-special font-medium text-xs whitespace-nowrap hover:text-blue hover:underline" href="https://docs.wakuconnect.dev/docs/guides/">Guides</a></li>
+										<li class="mb-4"><a class="font-special font-medium text-xs whitespace-nowrap hover:text-blue hover:underline" href="https://docs.wakuconnect.dev/">Docs</a></li>
+										<li><a class="font-special font-medium text-xs whitespace-nowrap hover:text-blue hover:underline" href="https://github.com/status-im/?q=waku&type=&language=&sort=">GitHub</a></li>
+									</ul>
+								</li>
+								<li class="menu-item md:m-0 cursor-pointer mb-8 md:mb-0 md:mx-16 md:py-2">
+									<a class="font-special font-bold text-xs" href="">Use Cases</a>
+								</li>
+								<li class="items-center menu-item relative mb-8 cursor-pointer md:flex md:m-0 md:py-2">
+									<a class="font-special font-bold text-xs">About us</a>
+									<img class="hidden transform duration-200 rotate-90 ml-2 md:block" src="assets/images/arrow/arrow-black.svg" alt="">
+									<ul class="bg-rectangle102 md:absolute md:top-full md:left-2/4 md:transform md:-translate-x-2/4 md:p-4 md:shadow md:hidden">
+										<li class="my-4 md:my-0 md:mb-4"><a class="font-special font-medium text-xs whitespace-nowrap hover:text-blue hover:underline" href="https://vac.dev/">Vac</a></li>
+										<li class="mb-4"><a class="font-special font-medium text-xs whitespace-nowrap hover:text-blue hover:underline" href="https://status.im/our_team/jobs.html">Careers</a></li>
+										<li class="mb-4"><a class="font-special font-medium text-xs whitespace-nowrap hover:text-blue hover:underline" href="https://vac.dev/research-log/">Blog</a></li>
+										<li class="mb-4"><a class="font-special font-medium text-xs whitespace-nowrap hover:text-blue hover:underline" href="https://forum.vac.dev/">Forum</a></li>
+										<li><a class="font-special font-medium text-xs whitespace-nowrap hover:text-blue hover:underline" href="https://discord.gg/NgQERkYbHD">Discord</a></li>
+									</ul>
+								</li>
+							</ul>
+							<a href="https://docs.wakuconnect.dev/docs/quick_start/" class="border border-rectangle97 font-bold text-xs py-3 px-6 md:hidden">Get Started</a>
+						</nav>
+						<div class="flex items-center justify-center mt-6 md:hidden">
+							<a href="">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C18.6274 0 24 5.37259 24 12C24 18.6274 18.6274 24 12 24C5.37259 24 0 18.6274 0 12C0 5.37259 5.37259 0 12 0ZM7.56029 18.3317C7.56029 18.3317 8.1648 17.6592 8.59973 17.0662C6.50477 16.4729 5.71493 15.2865 5.71493 15.2865C7.89312 16.6332 9.92741 17.1514 12 17.0841C14.0726 17.1513 16.1069 16.6332 18.2848 15.2865C18.2848 15.2865 17.4952 16.4729 15.4 17.0662C15.8351 17.6594 16.4394 18.3317 16.4394 18.3317C19.3784 18.267 20.8461 16.7848 21.3275 16.2986C21.4348 16.1902 21.4931 16.1313 21.5078 16.1486C21.5078 11.2526 19.1309 7.26605 19.1309 7.26605C17.0037 5.73965 15.0216 5.67619 14.6429 5.66827L14.4011 5.89766C17.1165 6.65698 18.4299 7.84344 18.4299 7.84344C16.0993 6.71779 13.9028 6.32184 12 6.29813C10.0972 6.32213 7.9008 6.71779 5.57011 7.84344C5.57011 7.84344 6.88349 6.65698 9.59885 5.89766L9.35712 5.66827C8.9784 5.67619 6.99629 5.73946 4.86912 7.26605C4.86912 7.26605 2.49221 11.2525 2.49221 16.1486C2.50689 16.1313 2.56519 16.1902 2.67246 16.2986C3.15385 16.7847 4.62153 18.267 7.56029 18.3317ZM14.9237 11.2374V11.2295C15.8422 11.2295 16.5835 11.9889 16.5835 12.9222C16.5835 13.8555 15.8422 14.6149 14.9237 14.6149C14.0051 14.6149 13.2638 13.8555 13.2638 12.9301C13.2638 11.9967 14.0131 11.2374 14.9237 11.2374ZM9.07449 11.2367V11.2288C8.15591 11.2288 7.41465 11.9881 7.41465 12.9214C7.41465 13.8548 8.15596 14.6142 9.07449 14.6142C9.99302 14.6142 10.7344 13.8548 10.7344 12.9294C10.7344 11.996 9.985 11.2367 9.07449 11.2367Z" fill="currentColor"/>
+								</svg>
+							</a>
+							<a href="" class="mx-10">
+								<svg width="25" height="24" viewBox="0 0 25 24" fill="none">
+									<path d="M24.0684 4.34768C23.1733 4.74583 22.2196 5.00973 21.2253 5.13787C22.2482 4.51853 23.0289 3.54529 23.396 2.37221C22.4423 2.94884 21.3893 3.35613 20.2671 3.58343C19.3615 2.60561 18.0708 2 16.6628 2C13.9311 2 11.7318 4.24853 11.7318 7.00503C11.7318 7.40165 11.7649 7.78302 11.8462 8.14608C7.744 7.94319 4.11419 5.94942 1.67576 2.91223C1.25005 3.66123 1.00034 4.51853 1.00034 5.44144C1.00034 7.17436 1.88034 8.7105 3.19207 9.59984C2.39932 9.58459 1.62161 9.35119 0.962735 8.98355C0.962735 8.99881 0.962735 9.01864 0.962735 9.03847C0.962735 11.4701 2.67309 13.4898 4.91597 13.955C4.51432 14.0664 4.07658 14.1198 3.62229 14.1198C3.30639 14.1198 2.98749 14.1015 2.68814 14.0344C3.32745 16.0159 5.14161 17.4727 7.29874 17.52C5.61997 18.8518 3.48841 19.6541 1.18085 19.6541C0.776205 19.6541 0.388103 19.6358 0 19.5855C2.18571 21.0149 4.77607 21.831 7.5695 21.831C16.6493 21.831 21.6134 14.2037 21.6134 7.59234C21.6134 7.37114 21.6059 7.15758 21.5953 6.94554C22.5746 6.24078 23.3975 5.36059 24.0684 4.34768Z" fill="currentColor"/>
+								</svg>
+							</a>
+							<a href="">
+								<svg width="25" height="24" viewBox="0 0 25 24" fill="none">
+									<path d="M11.9985 0.000183105C5.373 0.000183105 0.0289935 5.50878 0.0647597 12.3041C0.0933662 17.7392 3.55564 22.3501 8.33421 23.9785C8.9348 24.0919 9.1518 23.712 9.15009 23.3857C9.14855 23.0931 9.13397 22.3195 9.12257 21.2931C5.78898 22.0361 5.07139 19.6433 5.07139 19.6433C4.51941 18.2217 3.72991 17.8434 3.72991 17.8434C2.6354 17.0805 3.80698 17.0958 3.80698 17.0958C5.01194 17.1831 5.65116 18.3642 5.65116 18.3642C6.73205 20.2438 8.46769 19.7015 9.15003 19.386C9.25385 18.5909 9.56149 18.0486 9.90337 17.7407C7.23774 17.4298 4.43018 16.3743 4.40537 11.6608C4.3983 10.3173 4.86052 9.21896 5.62399 8.35805C5.49785 8.04708 5.08027 6.79555 5.72386 5.10283C5.72386 5.10283 6.73012 4.77195 9.03049 6.36356C9.98606 6.09089 11.0113 5.95455 12.0328 5.94996C13.0513 5.95608 14.0796 6.09089 15.0395 6.36509C17.3216 4.77348 18.3299 5.10437 18.3299 5.10437C18.9928 6.79861 18.5884 8.04862 18.467 8.35959C19.241 9.22049 19.7103 10.3188 19.7174 11.6623C19.7423 16.3881 16.9427 17.4282 14.2713 17.7331C14.7038 18.113 15.0918 18.8636 15.0978 20.011C15.1065 21.6562 15.0985 22.9828 15.1006 23.3857C15.1023 23.715 15.3203 24.098 15.9287 23.977C20.6826 22.3471 24.0934 17.7377 24.0648 12.3041C24.029 5.50878 18.627 0.000183105 11.9985 0.000183105Z" fill="currentcolor"/>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+				<a href="https://docs.wakuconnect.dev/docs/quick_start/" class="hidden border border-rectangle97 font-bold text-xs py-3 px-6 transition-colors duration-200 hover:bg-rectangle97 hover:text-rectangle102 md:block ">Get Started</a>
+				<button id="burger" class="relative flex flex-col justify-center items-center w-12 h-12 md:hidden">
+					<span id="line-top" class="block w-6 h-0.5 bg-rectangle97"></span>
+					<span id="line-middle" class="block w-6 h-0.5 bg-rectangle97 my-1.5"></span>
+					<span id="line-bottom" class="block w-6 h-0.5 bg-rectangle97"></span>
+				</button>
+			</div>
+			</div>
+		</header>
+		<div class="container mx-auto">
+			<!-- HERO -->
+			<section class="py-10 mb-10 border-b border-grey md:pl-20 lg:flex lg:justify-center lg:py-26 lg:mb-26">
+				<div class="max-w-lg md:max-w-2xl">
+					<h1 class="text-title md:text-3.5xl">Empower your dApp with decentralized communication</h1>
+					<p class="text-sm italic my-8 opacity-75 max-w-31 sm:pr-7">WakuConnect seamlessly enhances your project with off-chain communication for decentralized, private, and secure messaging.</p>
+					<a class="text-blue text-xs font-bold italic bg-link-arrow-blue bg-left bg-no-repeat pl-3 hover:underline" href="https://docs.wakuconnect.dev/" >See the docs</a>
+				</div>
+			</section>
+			<!-- Grid section -->
+			<section class="flex flex-col items-center mb-18 md:mb-20 lg:mb-32">
+				<h2 class="font-bold text-sm leading-6 mb-18">The future of Communication</h2>
+				<div class="grid grid-cols-1 gap-16 md:grid-cols-3 md:gap-4 lg:px-35 lg:gap-22">
+					<div class="flex flex-col items-center">
+						<img src="assets/images/photo1.svg" alt="Private and Secure by Design">
+						<h3 class="font-bold text-sm text-center leading-6 my-4">Private and secure by design</h3>
+						<p class="text-sm text-center leading-6 opacity-75">WakuConnect leverages peer-to-peer messaging protocols and strong end-to-end encryption to protect your users.</p>
+					</div>
+					<div class="flex flex-col items-center">
+						<img src="assets/images/photo2.svg" alt="Decentralized Messaging">
+						<h3 class="font-bold text-sm text-center leading-6 my-4">Decentralized messaging</h3>
+						<p class="text-sm text-center leading-6 opacity-75">Protect your users from censorship, and remove the weaknesses of centralized infrastructure.</p>
+					</div>
+					<div class="flex flex-col items-center">
+						<img src="assets/images/photo3.svg" alt="dApp Ready">
+						<h3 class="font-bold text-sm text-center leading-6 my-4">dApp ready</h3>
+						<p class="text-sm text-center leading-6 opacity-75">Optimized for mobile and web platforms, WakuConnect can be used by any project built on Ethereum or other blockchains.</p>
+					</div>
+				</div>
+			</section>
+			<!-- section code -->
+			<section id="sectionCode" class="border-b border-grey pb-10 mb-10 md:border-0 lg:border-b lg:flex lg:justify-between lg:px-28 lg:pb-25 lg:mb-25">
+				<div class="mb-11 md:mb-15 lg:max-w-xs">
+					<h2 class="font-bold text-sm leading-6 whitespace-nowrap mb-4">Get started with WakuConnect in minutes</h2>
+					<p class="text-sm leading-6 italic opacity-75 mb-7">The simple API allows you to introduce decentralized, private, secure communication to your application in minutes.</p>
+					<a class="text-blue text-xs font-bold italic bg-link-arrow-blue bg-left bg-no-repeat pl-3 hover:underline" href="https://docs.wakuconnect.dev/docs/quick_start/" >Get started</a>
+					<h1 class="testArea"></h1>
+				</div>
+				<div id="code" class="bg-rectangle97 p-4 md:px-8 lg:max-w-code lg:w-full lg:p-8 lg:h-96">
+
+					<span class="text-sm font-special text-red">import</span>
+					<span class="text-sm font-special text-rectangle102">{</span>
+					<span class="text-sm font-special text-orange">Waku</span>
+					<span class="text-sm font-special text-rectangle102 tight-left">,</span>
+					<span class="text-sm font-special text-orange">WakuMessage</span>
+					<span class="text-sm font-special text-rectangle102">}</span>
+					<span class="text-sm font-special text-red">from</span>
+					<span class="text-sm font-special text-rectangle98">'js-waku'</span>
+					<span class="text-sm font-special text-rectangle102 tight-left">;</span>
+					<br><br>
+					<span class="text-sm font-special text-red">const</span>
+					<span class="text-sm font-special text-rectangle102">waku</span>
+					<span class="text-sm font-special text-blueLight">=</span>
+					<span class="text-sm font-special text-red">await</span>
+					<span class="text-sm font-special text-orange">Waku</span>
+					<span class="text-sm font-special text-rectangle102 tight">.</span>
+					<span class="text-sm font-special text-violet">create</span>
+					<span class="text-sm font-special text-rectangle102">({</span>
+					<span class="text-sm font-special text-blueLight">boostrap</span>
+					<span class="text-sm font-special text-rectangle102 tight-left">:</span>
+					<span class="text-sm font-special text-blueLight">true</span>
+					<span class="text-sm font-special text-rectangle102"> </span>
+					<span class="text-sm font-special text-rectangle102">});</span>
+					<br><br>
+					<span class="text-sm font-special text-red">const</span>
+					<span class="text-sm font-special text-rectangle102">msg</span>
+					<span class="text-sm font-special text-blueLight">=</span>
+					<span class="text-sm font-special text-red">await</span>
+					<span class="text-sm font-special text-orange">WakuMessage</span>
+					<span class="text-sm font-special text-rectangle102 tight">.</span>
+					<span class="text-sm font-special text-violet">fromUtf8String</span>
+					<span class="text-sm font-special text-rectangle102">(</span>
+					<br><br>
+					<span class="text-sm font-special text-rectangle98 pl-4">'I am using a decentralized network for messaging',</span>
+					<br><br>
+					<span class="text-sm font-special text-rectangle98 pl-4">'/my-cool-app/1/my-use-case/proto'</span>
+					<br><br>
+					<span class="text-sm font-special text-rectangle102">);</span>
+					<br><br>
+					<span class="text-sm font-special text-red">await</span>
+					<span class="text-sm font-special text-rectangle102">waku.</span>
+					<span class="text-sm font-special text-blueLight tight-left">relay</span>
+					<span class="text-sm font-special text-rectangle102 tight">.</span>
+					<span class="text-sm font-special text-violet">send</span>
+					<span class="text-sm font-special text-rectangle102 tight-left">(msg);</span>
+				</div>
+			</section>
+			<!-- Use Cases -->
+			<section class="border-b border-grey pb-10 mb-10 md:pb-20 md:mb-20 lg:flex lg:justify-between lg:px-28 lg:pb-25 lg:mb-25">
+				<div class="mb-11 md:mb-5 lg:max-w-xs lg:mb-0 lg:mr-15">
+					<h2 class="font-bold text-sm leading-6 whitespace-nowrap mb-4">Use Cases</h2>
+					<p class="text-sm leading-6 italic opacity-75 mb-7">Anything that can be done off-chain can be done with WakuConnect. Here are just a few examples.</p>
+					<a class="text-blue text-xs font-bold italic bg-link-arrow-blue bg-left bg-no-repeat pl-3 hover:underline" href="https://docs.wakuconnect.dev/docs/use_cases/">Get inspired, view more use cases</a>
+				</div>
+				<div class="grid gap-4 w-full sm:grid-cols-2 md:gap-x-6">
+					<div class="flex flex-col items-end justify-end bg-green pt-10 px-4 pb-5 md:h-58 xl:p-10">
+						<h3 class="font-bold text-sm text-right leading-6 mb-5 md:mb-7">Decentralized Chat</h3>
+						<a class="text-rectangle97 text-xs font-bold italic bg-link-arrow-black bg-left bg-no-repeat pl-3 hover:underline" href="https://github.com/status-im/dappconnect-chat-sdk">Check out the repo</a>
+					</div>
+					<div class="flex flex-col items-end justify-end bg-rectangle99 pt-10 px-4 pb-5 md:h-58 xl:p-10">
+						<h3 class="font-bold text-sm text-right leading-6 mb-5 md:mb-7">Gasless Polling</h3>
+						<a class="text-rectangle97 text-xs font-bold italic bg-link-arrow-black bg-left bg-no-repeat pl-3 hover:underline" href="https://docs.wakuconnect.dev/docs/guides/vote_poll_sdk/poll_sdk/">View the guide</a>
+					</div>
+					<div class="flex flex-col items-end justify-end bg-rectangle96 pt-10 px-4 pb-5 md:h-58 xl:p-10">
+						<h3 class="font-bold text-sm text-right text-rectangle99 leading-6 mb-5 md:mb-7">dApp to Wallet Communication</h3>
+						<a class="text-rectangle99 text-xs text-rectangle99 font-bold italic bg-link-arrow-green bg-left bg-no-repeat pl-3 hover:underline" href="https://docs.wakuconnect.dev/docs/use_cases/#dapp-to-wallet-communication">Learn more</a>
+					</div>
+					<div class="flex flex-col items-end justify-end bg-rectangle98 pt-10 px-4 pb-5 md:h-58 xl:p-10">
+						<h3 class="font-bold text-sm text-right leading-6 mb-5 md:mb-7">Layer 2 Communication</h3>
+						<a class="text-rectangle97 text-xs font-bold italic bg-link-arrow-black bg-left bg-no-repeat pl-3 hover:underline" href="https://docs.wakuconnect.dev/docs/use_cases/#layer-2-communication">Learn more</a>
+					</div>
+				</div>
+			</section>
+			<!-- Built with Waku -->
+			<section class="lg:px-28">
+				<div class="flex flex-col items-center mb-11 xl:mb-26">
+					<h2 class="font-bold text-sm text-center leading-6 whitespace-nowrap mb-4">Built with Waku</h2>
+					<p class="text-sm text-center leading-6 italic opacity-75 mb-7 md:max-w-32.5">Waku is a suite of protocols designed for private, secure, and decentralized messaging. Waku is the communication layer for Web3.</p>
+					<a class="text-blue text-xs text-center font-bold italic bg-link-arrow-blue bg-left bg-no-repeat pl-3 hover:underline" href="https://waku.dev/">Learn more about Waku</a>
+				</div>
+				<div class="grid grid-cols-1 gap-6 mb-20 md:grid-cols-3 xl:gap-26">
+					<div>
+						<h3 class="font-bold text-sm leading-6 whitespace-nowrap mb-5 md:text-center xl:text-left">Tools, Docs, and Libraries</h3>
+						<p class="text-sm leading-6 opacity-75 md:text-center xl:text-left">WakuConnect provides you with everything you need to facilitate the usage of Waku in dApps.</p>
+					</div>
+					<div>
+						<h3 class="font-bold text-sm leading-6 whitespace-nowrap mb-5 md:text-center xl:text-left">SDKs</h3>
+						<p class="text-sm leading-6 opacity-75 md:text-center xl:text-left">Most common Waku use-cases can be added to your dApp thanks to ready-to-use npm packages and React components.</p>
+					</div>
+					<div>
+						<h3 class="font-bold text-sm leading-6 whitespace-nowrap mb-5 md:text-center xl:text-left">JS-Waku</h3>
+						<p class="text-sm leading-6 opacity-75 md:text-center xl:text-left">JS-Waku is the JavaScript implementation of the Waku protocol. Use it directly in your dApp for more advanced use cases.</p>
+					</div>
+				</div>
+			</section>
+			<!-- Green section -->
+			<section class="mb-20 lg:px-28 lg:mb-22">
+				<div class="bg-green p-6 md:flex md:items-center md:justify-center md:py-14 xl:py-15">
+					<svg id="logo" class="w-10 h-10 lg:w-17 lg:h-17 mr-10" viewBox="0 0 67 67" fill="none">
+						<path d="M50.952 9.68594C45.3511 6.50931 39.9076 3.42217 34.4642 0.335022C33.5419 -0.179502 32.6422 -0.0900197 31.7425 0.424504C21.8003 6.10664 11.8581 11.7664 1.93841 17.4485C1.6235 17.6275 1.33109 18.142 1.33109 18.5C1.30859 29.8419 1.2861 41.1614 1.35358 52.4809C1.35358 53.2192 1.91592 54.2706 2.52325 54.6285C7.87673 57.7828 13.2977 60.8028 18.7187 63.8676C18.7636 63.8899 18.8536 63.8676 19.101 63.8676C19.101 63.4425 19.101 62.9951 19.101 62.5701C19.101 51.4295 19.1235 40.3113 19.0786 29.1707C19.0786 28.1193 19.4609 27.6272 20.3157 27.1574C30.2804 21.52 40.2225 15.8602 50.1647 10.2005C50.3672 10.0886 50.5921 9.93202 50.952 9.68594Z" fill="currentColor"/>
+						<path d="M42.0897 67.0004C42.0897 66.4859 42.0897 66.0608 42.0897 65.6582C42.0897 57.8732 42.1122 50.0882 42.0672 42.2809C42.0672 41.2742 42.3596 40.7373 43.2593 40.2451C50.1874 36.375 57.0704 32.4378 63.976 28.5229C64.3134 28.344 64.6283 28.1426 65.0332 27.8966C64.8532 27.74 64.7407 27.6057 64.5833 27.5163C60.0846 24.9436 55.5633 22.3934 51.0871 19.776C49.76 18.9931 48.6128 18.9707 47.2407 19.7537C40.5376 23.6238 33.7895 27.4268 27.0414 31.2298C26.2992 31.6325 26.0742 32.1022 26.0742 32.9299C26.0967 40.6926 26.0967 48.4328 26.0742 56.1954C26.0742 57.3587 26.4341 58.2759 27.4688 58.8575C32.125 61.4972 36.7587 64.1146 41.4149 66.7543C41.5723 66.8438 41.7748 66.8885 42.0897 67.0004Z" fill="currentColor"/>
+						<path d="M65.1678 54.0029C59.7468 50.9157 54.5283 47.9628 49.1748 44.9204C49.1748 51.0276 49.1748 56.9334 49.1748 63.0854C54.4833 60.0653 59.7018 57.1124 65.1678 54.0029Z" fill="currentColor"/>
+					</svg>
+					<div>
+						<h2 class="font-bold text-sm leading-6 mt-6 mb-5 md:mt-0">Use WakuConnect for decentralized communications now</h2>
+						<a class="text-rectangle97 text-xs font-bold italic bg-link-arrow-black bg-left bg-no-repeat pl-3 hover:underline" href="https://docs.wakuconnect.dev/docs/quick_start/">Get started</a>
+					</div>
+				</div>
+			</section>
+			<!-- Links section -->
+			<section class="mb-10 lg:px-16 lg:mb-22">
+				<div class="grid grid-cols-2 gap-y-11 md:grid-cols-5">
+					<div class="flex flex-col items-center">
+						<svg width="33" height="32" viewBox="0 0 33 32" fill="none">
+								<path d="M32.2485 6.11174C31.0521 6.63195 29.7858 6.97584 28.4889 7.13272C29.8537 6.31485 30.8728 5.0282 31.3574 3.51145C30.0749 4.27728 28.6694 4.81685 27.202 5.10672C26.2146 4.04199 24.9034 3.33325 23.4741 3.09165C22.0448 2.85006 20.5782 3.08927 19.3044 3.77178C18.0305 4.45428 17.0215 5.54148 16.4354 6.86285C15.8494 8.18423 15.7196 9.66504 16.0664 11.073C13.4644 10.9415 10.9164 10.2642 8.58778 9.08511C6.25917 7.90606 4.20206 6.25164 2.5501 4.22932C1.97971 5.23461 1.68321 6.37308 1.69007 7.53154C1.69369 8.60736 1.96329 9.667 2.47485 10.6161C2.98641 11.5652 3.72407 12.3743 4.62214 12.9714C3.58182 12.9431 2.56241 12.664 1.65061 12.1578L1.65103 12.2376C1.66676 13.745 2.20265 15.2034 3.16805 16.3661C4.13346 17.5289 5.46911 18.3246 6.94909 18.6187C6.38089 18.7919 5.7905 18.8832 5.19569 18.8899C4.78391 18.8851 4.37297 18.8477 3.96673 18.7782C4.39457 20.0749 5.21527 21.2081 6.31464 22.0201C7.41401 22.8321 8.73736 23.2826 10.1006 23.3088C7.8084 25.1199 4.97187 26.1083 2.04314 26.1165C1.5099 26.1182 0.976899 26.0863 0.447338 26.0208C3.44777 27.9515 6.9379 28.9764 10.4973 28.972C12.9537 28.9975 15.388 28.5333 17.6579 27.6066C19.9279 26.6798 21.9881 25.3091 23.7181 23.5744C25.4482 21.8397 26.8134 19.7759 27.734 17.5034C28.6547 15.231 29.1123 12.7955 29.0801 10.3392C29.0787 10.068 29.0772 9.78087 29.0757 9.49372C30.3226 8.56019 31.3962 7.41576 32.2485 6.11174Z" fill="#132644"/>
+						</svg>
+						<a class="text-blue text-xs font-bold italic bg-link-arrow-blue bg-left bg-no-repeat pl-3 mt-5 lg:mt-9 hover:underline" href="https://twitter.com/wakuconnect">Twitter</a>
+					</div>
+					<div class="flex flex-col items-center">
+						<svg width="40" height="32" viewBox="0 0 40 32" fill="none">
+							<path d="M37.7988 13.6081C36.2597 8.19607 34.5066 5.39968 34.4783 5.34952C34.3782 5.22592 31.8959 2.22193 25.8867 0L25.0796 2.17663C27.9384 3.23372 29.9637 4.52331 31.0769 5.35655C27.7456 4.35535 23.7796 3.74217 20.2641 3.74217C16.7486 3.74217 12.7762 4.35535 9.43433 5.35655C10.5562 4.52339 12.5951 3.23372 15.4651 2.17663L14.6809 0C8.64845 2.22193 6.13452 5.22592 6.0331 5.34952C6.0043 5.39968 4.22168 8.19607 2.62568 13.6081C1.08748 18.8237 0.47484 26.1813 0.452441 26.4764C0.585942 26.6878 3.65409 31.9996 12.0919 31.9996L14.247 28.8875C11.8543 28.2482 9.57488 27.2172 7.49073 25.8183L8.77957 23.888C12.1419 26.1448 16.0702 27.3377 20.1399 27.3377C24.2097 27.3377 28.1506 26.1448 31.5366 23.888L32.8051 25.8183C30.7064 27.2172 28.416 28.2482 26.0165 28.8875L28.1389 31.9996C36.5767 31.9996 39.7008 26.6878 39.8365 26.4764C39.8172 26.1813 39.282 18.8237 37.7988 13.6081ZM14.8451 19.6744H12.5375L12.5578 15.8096H14.8655L14.8451 19.6744ZM27.8231 19.6744H25.5154L25.5358 15.8096H27.8434L27.8231 19.6744Z" fill="#132644"/>
+						</svg>
+						<a class="text-blue text-xs font-bold italic bg-link-arrow-blue bg-left bg-no-repeat pl-3 mt-5 lg:mt-9 hover:underline" href="https://discord.gg/NgQERkYbHD">Discord</a>
+					</div>
+					<div class="flex flex-col items-center">
+						<svg width="33" height="32" viewBox="0 0 33 32" fill="none">
+							<path d="M15.9978 -0.000488281C7.1639 -0.000488281 0.0375093 7.12605 0.0837804 15.9173C0.120789 22.9487 4.73612 28.9139 11.1071 31.0206C11.9079 31.1672 12.1973 30.6757 12.1951 30.2536C12.1931 29.8751 12.1738 28.8743 12.1588 27.5465C7.71394 28.5076 6.75766 25.4121 6.75766 25.4121C6.02199 23.573 4.96943 23.0835 4.96943 23.0835C3.51026 22.0965 5.07234 22.1163 5.07234 22.1163C6.67891 22.2293 7.53094 23.7573 7.53094 23.7573C8.97172 26.1889 11.286 25.4874 12.1958 25.0791C12.3344 24.0506 12.7447 23.349 13.2006 22.9507C9.64655 22.5484 5.90341 21.1829 5.87132 15.0849C5.86217 13.3469 6.47868 11.926 7.49681 10.8122C7.32869 10.4099 6.77218 8.79076 7.63064 6.60087C7.63064 6.60087 8.97237 6.1728 12.0392 8.23189C13.3133 7.87913 14.6803 7.70275 16.0423 7.6968C17.4003 7.70473 18.7712 7.87913 20.0511 8.23387C23.0942 6.17479 24.4384 6.60285 24.4384 6.60285C25.3219 8.79472 24.7825 10.4119 24.6206 10.8142C25.6524 11.9279 26.2779 13.3489 26.287 15.0869C26.3192 21.2008 22.5864 22.5464 19.0245 22.9408C19.6011 23.4323 20.1182 24.4033 20.126 25.8877C20.1372 28.0161 20.1262 29.7324 20.129 30.2536C20.1312 30.6797 20.4218 31.1751 21.233 31.0186C27.5718 28.9099 32.1203 22.9467 32.0833 15.9173C32.0371 7.12605 24.8357 -0.000488281 15.9978 -0.000488281Z" fill="#132644"/>
+						</svg>
+						<a class="text-blue text-xs font-bold italic bg-link-arrow-blue bg-left bg-no-repeat pl-3 mt-5 lg:mt-9 hover:underline" href="https://github.com/status-im/?q=waku&type=&language=&sort=">GitHub</a>
+					</div>
+					<div class="flex flex-col items-center">
+						<svg width="33" height="32" viewBox="0 0 33 32" fill="none">
+							<path d="M17.1187 2C9.45625 2 3 8.15625 3 15.7563C3 16 3.00625 30 3.00625 30L17.1187 29.9875C24.7875 29.9875 31 23.5938 31 15.9937C31 8.39375 24.7875 2 17.1187 2ZM17 24C15.7875 24 14.6313 23.7312 13.6 23.2437L8.53125 24.5L9.9625 19.8125C9.35 18.6812 9 17.3813 9 16C9 11.5813 12.5813 8 17 8C21.4188 8 25 11.5813 25 16C25 20.4188 21.4188 24 17 24Z" fill="#132644"/>
+						</svg>
+						<a class="text-blue text-xs font-bold italic bg-link-arrow-blue bg-left bg-no-repeat pl-3 mt-5 lg:mt-9 hover:underline" href="https://forum.vac.dev/">Forum</a>
+					</div>
+					<div class="flex flex-col items-center">
+						<svg width="15" height="32" viewBox="0 0 15 32" fill="none">
+							<g clip-path="url(#clip0_1662_10901)">
+								<path d="M6.84648 11.0368C6.79238 8.40203 5.70498 5.872 4.29297 3.61958C5.0666 3.15862 5.94842 2.90195 6.84107 3.06957C7.73372 3.23719 8.55063 3.80816 8.93474 4.60436C9.26474 5.30103 9.24851 6.09724 9.19441 6.86201C9.16736 7.20249 9.1349 7.54821 9.0213 7.87298C8.94556 8.0825 8.84277 8.27632 8.72375 8.45965C8.57227 8.70061 8.39915 8.92585 8.22603 9.15109C7.76618 9.76396 7.30633 10.424 6.84648 11.0368Z" fill="#284778"/>
+								<path d="M14.4806 16.1597C14.3291 15.8139 14.1398 15.4839 13.9071 15.1801C13.7773 15.0073 13.6366 14.8449 13.5014 14.6773C13.1714 14.253 13.0632 13.6925 12.652 13.3468C12.23 12.9958 12.0894 12.3672 12.3112 11.8696C12.4032 11.6653 12.5546 11.4872 12.6466 11.2882C12.9171 10.7172 12.7332 10.0467 12.4735 9.47052C12.111 8.66384 11.6079 7.92526 11.0777 7.20763C10.3582 6.22809 9.58997 5.28522 8.77847 4.37378C8.92454 5.15951 8.85421 5.91904 8.65945 6.69953C8.55125 7.12906 8.39977 7.54811 8.20501 7.95145C7.96697 8.44384 7.66401 8.91004 7.36105 9.371C5.58658 12.0687 3.758 14.7349 1.87533 17.3644C0.798744 18.8678 0.425456 20.8478 0.301026 22.6707C0.176597 24.4936 0.539065 26.3689 1.46958 27.9613C2.01058 28.8884 2.73552 29.7056 3.47128 30.5018C3.93653 31.0047 4.47753 31.7799 5.14296 31.9999C5.22952 31.2299 5.37018 30.1927 5.47838 29.428C5.66232 28.1813 6.07889 26.9608 6.71186 25.8608C7.13925 25.1117 7.71811 24.3731 8.55666 24.1007C9.12471 23.9174 9.76309 23.9907 10.3636 24.0431C10.699 24.0169 11.0398 24.0641 11.3753 24.0641C11.7107 24.0641 12.0677 24.0169 12.3382 23.8284C12.6412 23.6188 12.8035 23.2679 12.8576 22.9117C12.9117 22.5555 12.8684 22.1836 12.8468 21.8274C12.8305 21.5917 12.8197 21.3455 12.9333 21.1359C13.1389 20.7483 13.7232 20.565 13.7557 20.1302C13.7719 19.9312 13.6583 19.7478 13.5771 19.5592C13.496 19.3707 13.4581 19.1402 13.5988 18.9883C13.6691 18.9149 13.7665 18.8783 13.8314 18.8049C13.9666 18.6478 13.8909 18.4121 13.7719 18.2445C13.6529 18.0768 13.4906 17.9249 13.4581 17.7259C13.4202 17.5321 13.5176 17.333 13.6583 17.1864C13.7989 17.0397 13.9775 16.9402 14.156 16.8354C14.3237 16.7359 14.5022 16.6049 14.5185 16.4163C14.5239 16.3325 14.4968 16.2487 14.4698 16.1701C14.3562 15.8663 14.1993 15.5782 13.9991 15.3163" fill="#132644"/>
+							</g>
+							<defs>
+								<clipPath id="clip0_1662_10901">
+									<rect width="14" height="32" fill="white" transform="translate(0.599609)"/>
+								</clipPath>
+							</defs>
+						</svg>
+						<a class="text-blue text-xs font-bold italic bg-link-arrow-blue bg-left bg-no-repeat pl-3 mt-5 lg:mt-9 hover:underline" href="https://vac.dev/research-log/">Blog</a>
+					</div>
+				</div>
+			</section>
+		</div>
+		<footer class="bg-rectangle97 pt-4 pb-8 md:pt-10">
+			<div class="container mx-auto">
+				<div class="md:px-5 lg:px-28">
+					<div class="md:flex xl:justify-between xl:px-14">
+						<div class="flex mb-6 md:min-w-max md:mr-22">
+							<svg class="w-8 h-8 text-rectangle102">
+								<use href="#logo"/>
+							</svg>
+							<p class="text-sm text-rectangle102 leading-6 opacity-75 ml-10">WakuConnect <br> Empower your dApp with <br> decentralized communication</p>
+						</div>
+						<div class="flex flex-wrap justify-between md:w-full xl:max-w-xl">
+							<div class="text-rectangle102 w-1/2 sm:w-auto md:w-24">
+								<h3 class="text-sm leading-6 mb-5">Developers</h3>
+								<ul>
+									<li class="mb-3.5"><a class="text-sm leading-6 opacity-75 hover:underline hover:opacity-100" href="https://docs.wakuconnect.dev/docs/quick_start/">Quick Start</a></li>
+									<li class="mb-3.5"><a class="text-sm leading-6 opacity-75 hover:underline hover:opacity-100" href="https://docs.wakuconnect.dev/">Docs</a></li>
+									<li><a class="text-sm leading-6 opacity-75 hover:underline hover:opacity-100" href="https://docs.wakuconnect.dev/docs/guides/">Guides</a></li>
+								</ul>
+							</div>
+							<div class="text-rectangle102 w-1/2 sm:w-auto md:w-24 sm:order-3 xl:w-auto">
+								<h3 class="text-sm leading-6 mb-5">Connect</h3>
+								<ul class="xl:grid xl:grid-cols-2 xl:gap-x-16">
+									<li class="mb-3.5 xl:order-1"><a class="text-sm leading-6 opacity-75 hover:underline hover:opacity-100" href="https://twitter.com/wakuconnect">Twitter</a></li>
+									<li class="mb-3.5 xl:order-3"><a class="text-sm leading-6 opacity-75 hover:underline hover:opacity-100" href="https://discord.gg/NgQERkYbHD">Discord</a></li>
+									<li class="mb-3.5 xl:order-5"><a class="text-sm leading-6 opacity-75 hover:underline hover:opacity-100" href="https://github.com/status-im/?q=waku&type=&language=&sort=">GitHub</a></li>
+									<li class="mb-3.5 xl:order-2"><a class="text-sm leading-6 opacity-75 hover:underline hover:opacity-100" href="https://forum.vac.dev/">Forum</a></li>
+									<li class="xl:order-4"><a class="text-sm leading-6 opacity-75 hover:underline hover:opacity-100" href="https://vac.dev/research-log/">Blog</a></li>
+								</ul>
+							</div>
+							<div class="text-rectangle102 w-1/2 -mt-10 sm:w-auto md:w-24 sm:mt-0">
+								<h3 class="text-sm leading-6 mb-5">About us</h3>
+								<ul>
+									<li class="mb-3.5"><a class="text-sm leading-6 opacity-75 hover:underline hover:opacity-100" href="https://vac.dev/">Vac</a></li>
+									<li><a class="text-sm leading-6 opacity-75 hover:underline hover:opacity-100" href="https://status.im/our_team/jobs.html">Careers</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="flex items-center justify-center mt-14 md:w-full md:justify-start md:-mt-6 xl:mt-4 xl:pl-32">
+						<p class="text-sm text-rectangle102 opacity-75 leading-6">Part of the Status Network</p>
+						<svg class="ml-4" width="24" height="25" viewBox="0 0 24 25" fill="none">
+							<path d="M12.062 11.9736C12.6672 12.0362 13.272 12.0988 14.0159 12.0576C16.0308 11.9458 17.2515 10.9155 17.1648 9.37564C17.0764 7.80878 15.4526 6.84364 13.8279 6.93407C11.1799 7.08064 9.23248 9.39664 9.01356 12.0426C9.37327 11.9591 9.75185 11.9085 10.1086 11.8888C10.8524 11.8476 11.4572 11.9102 12.062 11.9732V11.9736ZM6.87167 15.3988C6.95494 16.8349 8.49333 17.7199 10.0326 17.6368C12.5419 17.5022 14.3863 15.3795 14.5937 12.9538C14.2528 13.0309 13.8944 13.0768 13.5562 13.0952C12.8518 13.1329 12.2788 13.0751 11.7053 13.0181C11.1323 12.9602 10.5593 12.9028 9.85444 12.9409C7.94562 13.0434 6.78968 13.9875 6.87124 15.3992L6.87167 15.3988Z" fill="white"/>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="./js/main.js"></script>
+	</body>
+</html>
