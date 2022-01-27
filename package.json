@@ -1,7 +1,7 @@
 {
   "name": "@waku/wakuconnect.dev",
   "version": "1.0.0",
-  "description": "WakuConnect - landing page",
+  "description": "Waku Connect - landing page",
   "license": "MIT",
   "main": "src/index.html",
   "scripts": {
